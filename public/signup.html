@@ -16,14 +16,11 @@
     <!-- Navbar goes here -->
     <nav class="navbar-expand-lg navbar navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="/assets/img/logo1.png" alt="logo" width="60px" height="55px" /> Shoe-ing
-            </a>
+            <a class="navbar-brand" href="/"><img src="/assets/img/logo1.png" alt="logo" width="60px" height="55px" /> Shoe-ing</a>
             <a class="nav-link text-light" href="/">Home</a>
             <form id="navForm" class="form-inline my-2 my-lg-0">
                 <input id="navInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                <button id="navSearch" class="btn btn-outline-light my-2 my-sm-0" type="submit">
-            Search
-          </button>
+                <button id="navSearch" class="btn btn-outline-light my-2 my-sm-0" type="submit"> Search</button>
             </form>
             <button id="navBtns" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -39,51 +36,42 @@
                         <a id="navLogin" class="nav-link" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a id="navContact" class="nav-link" href="/contact">Contact</a
-              >
-            </li>
-          </ul>
+                        <a id="navContact" class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
 
     <main>
-    <div class="container">
-      <div class="d-flex justify-content-center h-100">
-          <div class="card">
-              <div class="card-header">
-                  <h3>Sign Up:</h3>
-              </div>
-              <div class="card-body">
-                  <form id="newUserForm">
-                    <div class="col-12">
-                      <div class="mb-3">
-                        <label for="Name" class="form-label text-light">Username</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          aria-describedby="emailHelp"
-                        />
-                      </div>
-                      <div class="mb-3">
-                        <label for="password" class="form-label text-light">Password</label>
-                        <input
-                          type="password"
-                          class="form-control"
-                          id="password"
-                        />
-                      </div>
-                      <div class="mb-3 form-check"></div>
-                      <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="container">
+            <div class="d-flex justify-content-center h-100">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Sign Up:</h3>
                     </div>
-                  </form>
-               </div>
-          </div>
-       </div>
-   </div>
-</main>
-    
-  </body>
-  <script src="/assets/js/signup.js"></script>
+                    <div class="card-body">
+                        <form id="newUserForm">
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="Name" class="form-label text-light">Username</label>
+                                    <input type="text" class="form-control" id="name" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label text-light">Password</label>
+                                    <input type="password" class="form-control" id="password" />
+                                </div>
+                                <div class="mb-3 form-check"></div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+<script src="/assets/js/signup.js"></script>
+
 </html>
