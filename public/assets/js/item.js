@@ -53,7 +53,7 @@ let renderShoe = shoe => {
     $('#imgLg').attr('src', shoe.image_url);
     $('#name').text(shoe.product_name);
     $('#stock').text(`Stock: ${shoe.stock}`);
-    $('#size').text(`Price: ${shoe.price}`);
+    $('#price').text(`Price: ${shoe.price}`);
     $('#info').text(`Description: ${shoe.description}`)
 }
 
@@ -153,11 +153,6 @@ $(document).ready(() => {
             location.href = `/search/${search}`
         }
     })
-
-    $('.row').children().first().css('display', 'none');
-    $('.btn-light').css('display', 'none');
-    $('#detail').css('display', 'none');
-    $('#review').css('display', 'none');
 
     checkLogged();
     loadShoe();

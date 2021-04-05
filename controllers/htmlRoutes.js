@@ -3,31 +3,45 @@ const path = require('path');
 const withAuth = require('../utils/auth');
 
 router.get('/', async(req, res) => {
-    res.sendFile(path.join(__dirname, '../public/home.html'));
+    let pageTitle = 'Home';
+    res.render('index', { pageTitle });
+    // res.sendFile(path.join(__dirname, '../public/home.html'));
 });
 
 router.get('/search/:search', async(req, res) => {
-    res.sendFile(path.join(__dirname, '../public/home.html'));
+    let pageTitle = 'Home';
+    res.render('index', { pageTitle });
+    // res.sendFile(path.join(__dirname, '../public/home.html'));
 });
 
 router.get('/item/:id', async(req, res) => {
-    res.sendFile(path.join(__dirname, '../public/item.html'));
+    let pageTitle = 'Item';
+    res.render('item', { pageTitle });
+    // res.sendFile(path.join(__dirname, '../public/item.html'));
 });
 
 router.get('/cart', withAuth, async(req, res) => {
-    res.sendFile(path.join(__dirname, '../public/cart.html'));
+    let pageTitle = 'Cart';
+    res.render('cart', { pageTitle });
+    // res.sendFile(path.join(__dirname, '../public/cart.html'));
 });
 
 router.get('/login', async(req, res) => {
-    res.sendFile(path.join(__dirname, '../public/login.html'));
+    let pageTitle = 'Login';
+    res.render('login', { pageTitle });
+    // res.sendFile(path.join(__dirname, '../public/login.html'));
 });
 
 router.get('/signup', async(req, res) => {
-    res.sendFile(path.join(__dirname, '../public/signup.html'));
+    let pageTitle = 'Sign-Up';
+    res.render('signup', { pageTitle });
+    // res.sendFile(path.join(__dirname, '../public/signup.html'));
 });
 
 router.get('/contact', async(req, res) => {
-    res.sendFile(path.join(__dirname, '../public/contact.html'));
+    let pageTitle = 'Contact';
+    res.render('contact', { pageTitle });
+    // res.sendFile(path.join(__dirname, '../public/contact.html'));
 });
 
 module.exports = router;

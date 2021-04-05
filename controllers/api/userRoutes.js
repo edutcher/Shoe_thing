@@ -61,7 +61,7 @@ router.post('/login', async(req, res) => {
 
 router.get('/logged', async(req, res) => {
     if (req.session.logged_in) {
-        res.status(200).json({ logged_in: true })
+        res.status(200).json({ logged_in: true, user_id: req.session.user_id })
     } else {
         res.status(400).json({ logged_in: false })
     }

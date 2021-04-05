@@ -1,4 +1,5 @@
 let curTotal;
+let userId;
 
 let renderTotal = () => {
     let newRow = $('<tr>');
@@ -162,6 +163,7 @@ let checkLogged = () => {
     axios.get('/api/users/logged')
         .then(res => {
             if (res.data.logged_in) {
+                userId = res.data.user_id;
                 $('#navLogin').text('Logout').removeAttr('href').css('cursor', 'pointer').click(logout);
             } else {
                 location.href = "/login"
@@ -206,7 +208,7 @@ let displayOrders = (orders) => {
 
 
 let getOrders = () => {
-    axios.get('/api/orders')
+    axios.get(`/api/orders/${userId}`)
         .then(res => {
             console.log(res);
             displayOrders(res.data)

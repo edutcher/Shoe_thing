@@ -1,0 +1,33 @@
+<%- include('partials/head.ejs',{pageTitle}) %>
+    <main>
+        <div class="container">
+            <div class="d-flex justify-content-center h-100">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Sign Up:</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="newUserForm">
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="Name" class="form-label text-light">Username</label>
+                                    <input type="text" class="form-control" id="name" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label text-light">Password</label>
+                                    <input type="password" class="form-control" id="password" />
+                                </div>
+                                <div class="mb-3 form-check"></div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    </body>
+    <script src="/assets/js/signup.js"></script>
+
+    </html>

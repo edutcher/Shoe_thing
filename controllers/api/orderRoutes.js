@@ -2,17 +2,15 @@ const router = require('express').Router();
 const { Category, Product, Cart, CartItem, User, Order, OrderItem } = require('../../models');
 
 router.get('/', async(req, res) => {
-    if (!req.session.logged_in) {
+    if (req.session.user_name != "admin") {
 
-        res.status(400).json({ message: "Please log in" })
+        res.status(400).json({ message: "Unauthorized" })
         return;
     }
 
     try {
 
-        let user = await User.findByPk(req.session.user_id, { exclude: ['password'] });
-
-        let orders = await user.getOrders({
+        let orders = await Order.findAll({
             include: [{ model: Product, through: OrderItem }, { model: User, exclude: ['password'] }]
         })
 
